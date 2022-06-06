@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/demn/projects/Demnoboard/Demnoboard.csproj": {}
+  },
+  "projects": {
+    "/home/demn/projects/Demnoboard/Demnoboard.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/demn/projects/Demnoboard/Demnoboard.csproj",
+        "projectName": "Demnoboard",
+        "projectPath": "/home/demn/projects/Demnoboard/Demnoboard.csproj",
+        "packagesPath": "/home/demn/.nuget/packages/",
+        "outputPath": "/home/demn/projects/Demnoboard/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/demn/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/demn/.dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

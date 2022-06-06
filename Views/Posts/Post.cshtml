@@ -1,0 +1,39 @@
+@{
+    Post post = ViewBag.post;
+    var replies = post.Replies; 
+    ViewData["Title"] = post.Title;
+}
+
+<div class="input-fields" id="input-fields">
+    <form action="/Posts/CreateReply" method="POST">
+        <div class="g-recaptcha" data-sitekey="6LdFdkYgAAAAAMlXQze-tVOogDLng_sbZ2ONH9DE"></div>
+        <input type="text" name="Title" placeholder="Title"/>
+        <textarea type="text" name="Text" placeholder="Text"></textarea>
+        <input type="text" name="Id" value="@post.Id" style="display: none;"/>
+        <br/>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<div class="thread">
+    <div class="thread-info">
+        <span class="thread-identifier">@post.Id</span>
+        <span class="thread-title">@post.Title</span>
+        <a class="thread-button" href="~/Posts/Post?id=@post.Id">View -></a>
+    </div>
+    <div class="thread-text">@post.Text</div>
+    <hr/>
+</div> 
+
+@foreach (var reply in replies)
+{
+    <div class="thread">
+        <div class="thread-info">
+            <span class="thread-identifier">@reply.Id</span>
+            <span class="thread-title">@reply.Title</span>
+            
+        </div>
+        <div class="thread-text">@reply.Text</div>
+        <hr/>
+    </div> 
+}

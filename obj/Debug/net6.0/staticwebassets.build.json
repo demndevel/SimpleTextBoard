@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "kdTJfn09WkH5aVgDxVjBL2O+Wy6IMVFR1xDlKH5Oges=",
+  "Source": "Demnoboard",
+  "BasePath": "_content/Demnoboard",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Demnoboard/wwwroot",
+      "Source": "Demnoboard",
+      "ContentRoot": "/home/demn/projects/Demnoboard/wwwroot/",
+      "BasePath": "_content/Demnoboard",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/demn/projects/Demnoboard/wwwroot/favicon.ico",
+      "SourceId": "Demnoboard",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/demn/projects/Demnoboard/wwwroot/",
+      "BasePath": "_content/Demnoboard",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/home/demn/projects/Demnoboard/wwwroot/styles.css",
+      "SourceId": "Demnoboard",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/demn/projects/Demnoboard/wwwroot/",
+      "BasePath": "_content/Demnoboard",
+      "RelativePath": "styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/styles.css"
+    }
+  ]
+}
