@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b0PCWmhitGR3bh7I54FSBgNBgJcrNKPHcw/Pf9hO+9ZwImy6ElrFxt7Tl1pls8R5y4eIaaYL/luqEal/LiD46Q==",
+  "dgSpecHash": "NjSogtQZDTzRdOEPampaTNUgtKTHHSISKb/5k4GPLUORu+t/FX8Ko3NH4iFb4wil94OswDzW2bFsM5zXmSdmVA==",
   "success": true,
-  "projectFilePath": "/home/demn/projects/Demnoboard/Demnoboard.csproj",
+  "projectFilePath": "/home/demn/projects/SimpleTextBoard/Demnoboard.csproj",
   "expectedPackageFiles": [
     "/home/demn/.nuget/packages/microsoft.entityframeworkcore/6.0.1/microsoft.entityframeworkcore.6.0.1.nupkg.sha512",
     "/home/demn/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.1/microsoft.entityframeworkcore.abstractions.6.0.1.nupkg.sha512",

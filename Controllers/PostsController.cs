@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Demnoboard.Models;
 using Microsoft.EntityFrameworkCore;
@@ -9,13 +8,11 @@ namespace Demnoboard.Controllers;
 
 public class PostsController : Controller
 {
-    private readonly ILogger<PostsController> _logger;
     private readonly IOptions<CaptchaConfig> _config;
-    private DbContext _db;
+    private readonly DbContext _db;
     
-    public PostsController(ILogger<PostsController> logger, DbContext databaseContext, IOptions<CaptchaConfig> config)
+    public PostsController(DbContext databaseContext, IOptions<CaptchaConfig> config)
     {
-        _logger = logger;
         _db = databaseContext;
         _config = config;
     }
@@ -69,11 +66,12 @@ public class PostsController : Controller
         _db.Posts.
             Include(repl => repl.Replies)
             .FirstOrDefault(e => e.Id == id)
-            ?.Replies.Add(new Reply {Text = text, Title = title});
-        
-        if (_db.Posts.
-                Include(repl => repl.Replies)
-                .FirstOrDefault(e => e.Id == id)!.Replies.Count > 1000)
+            ?.Replies?.Add(new Reply {Text = text, Title = title});
+
+        var posts = _db.Posts.
+            Include(repl => repl.Replies)
+            .FirstOrDefault(e => e.Id == id)!.Replies;
+        if (posts != null && posts.Count > 1000)
             _db.Remove(_db.Posts.FirstOrDefault(e => e.Id == id));
         
         _db.SaveChanges();

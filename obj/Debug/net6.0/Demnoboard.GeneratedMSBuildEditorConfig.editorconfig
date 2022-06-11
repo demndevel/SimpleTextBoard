@@ -8,41 +8,41 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Demnoboard
 build_property.RootNamespace = Demnoboard
-build_property.ProjectDir = /home/demn/projects/Demnoboard/
+build_property.ProjectDir = /home/demn/projects/SimpleTextBoard/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/demn/projects/Demnoboard
+build_property.MSBuildProjectDirectory = /home/demn/projects/SimpleTextBoard
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/demn/projects/Demnoboard/Views/Posts/Index.cshtml]
+[/home/demn/projects/SimpleTextBoard/Views/Posts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/demn/projects/Demnoboard/Views/Posts/Post.cshtml]
+[/home/demn/projects/SimpleTextBoard/Views/Posts/Post.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUG9zdHMvUG9zdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/demn/projects/Demnoboard/Views/Shared/404.cshtml]
+[/home/demn/projects/SimpleTextBoard/Views/Shared/404.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkLzQwNC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/demn/projects/Demnoboard/Views/Shared/Error.cshtml]
+[/home/demn/projects/SimpleTextBoard/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/demn/projects/Demnoboard/Views/Shared/_Layout.cshtml]
+[/home/demn/projects/SimpleTextBoard/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/demn/projects/Demnoboard/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/home/demn/projects/SimpleTextBoard/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/demn/projects/Demnoboard/Views/_ViewImports.cshtml]
+[/home/demn/projects/SimpleTextBoard/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/demn/projects/Demnoboard/Views/_ViewStart.cshtml]
+[/home/demn/projects/SimpleTextBoard/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

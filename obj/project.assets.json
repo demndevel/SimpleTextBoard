@@ -690,11 +690,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/demn/projects/Demnoboard/Demnoboard.csproj",
+      "projectUniqueName": "/home/demn/projects/SimpleTextBoard/Demnoboard.csproj",
       "projectName": "Demnoboard",
-      "projectPath": "/home/demn/projects/Demnoboard/Demnoboard.csproj",
+      "projectPath": "/home/demn/projects/SimpleTextBoard/Demnoboard.csproj",
       "packagesPath": "/home/demn/.nuget/packages/",
-      "outputPath": "/home/demn/projects/Demnoboard/obj/",
+      "outputPath": "/home/demn/projects/SimpleTextBoard/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/demn/.nuget/NuGet/NuGet.Config"
