@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kdTJfn09WkH5aVgDxVjBL2O+Wy6IMVFR1xDlKH5Oges=",
+  "Hash": "nlSyH6GqZf4Kz8UZQ17+KZtGfTLn21jrQ+UPZeLhfWY=",
   "Source": "Demnoboard",
   "BasePath": "_content/Demnoboard",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Demnoboard/wwwroot",
       "Source": "Demnoboard",
-      "ContentRoot": "/home/demn/projects/Demnoboard/wwwroot/",
+      "ContentRoot": "/home/demn/projects/SimpleTextBoard/wwwroot/",
       "BasePath": "_content/Demnoboard",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/demn/projects/Demnoboard/wwwroot/favicon.ico",
+      "Identity": "/home/demn/projects/SimpleTextBoard/wwwroot/favicon.ico",
       "SourceId": "Demnoboard",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/demn/projects/Demnoboard/wwwroot/",
+      "ContentRoot": "/home/demn/projects/SimpleTextBoard/wwwroot/",
       "BasePath": "_content/Demnoboard",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/home/demn/projects/Demnoboard/wwwroot/styles.css",
+      "Identity": "/home/demn/projects/SimpleTextBoard/wwwroot/styles.css",
       "SourceId": "Demnoboard",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/demn/projects/Demnoboard/wwwroot/",
+      "ContentRoot": "/home/demn/projects/SimpleTextBoard/wwwroot/",
       "BasePath": "_content/Demnoboard",
       "RelativePath": "styles.css",
       "AssetKind": "All",

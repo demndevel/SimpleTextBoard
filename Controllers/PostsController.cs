@@ -41,13 +41,19 @@ public class PostsController : Controller
     {
         var captchaResponse = Request.Form["g-recaptcha-response"];
         if (!VerifyCaptcha.Verify(captchaResponse, _config.Value.ServerKey))
-            return BadRequest();
+            return View("InputError");
+        
+        string text = Request.Form["Text"];
+        string title = Request.Form["title"];
+        
+        if (text.Length > 115 || title.Length > 115)
+            return View("InputError");
         
         var post = new Post { Title = Request.Form["Title"], Text = Request.Form["Text"]};
         _db.Posts.Add(post);
         
-        if (_db.Posts.ToList().Count > 100)
-            _db.Posts.ToList().RemoveAt(0);
+        if (_db.Posts.Count() > 100)
+            _db.Posts.Remove(_db.Posts.First());
         
         _db.SaveChanges();
         return Redirect("~/");
@@ -57,11 +63,14 @@ public class PostsController : Controller
     {
         var captchaResponse = Request.Form["g-recaptcha-response"];
         if (!VerifyCaptcha.Verify(captchaResponse, _config.Value.ServerKey))
-            return BadRequest();
-
+            return View("InputError");
+        
         int id = Convert.ToInt32(Request.Form["id"]);
-        var title = Request.Form["title"];
-        var text = Request.Form["text"];
+        string title = Request.Form["title"];
+        string text = Request.Form["text"];
+        
+        if (text.Length > 115 || title.Length > 115)
+            return View("InputError");
         
         _db.Posts.
             Include(repl => repl.Replies)
@@ -71,7 +80,7 @@ public class PostsController : Controller
         var posts = _db.Posts.
             Include(repl => repl.Replies)
             .FirstOrDefault(e => e.Id == id)!.Replies;
-        if (posts != null && posts.Count > 1000)
+        if (posts != null && posts.Count > 50)
             _db.Remove(_db.Posts.FirstOrDefault(e => e.Id == id));
         
         _db.SaveChanges();
