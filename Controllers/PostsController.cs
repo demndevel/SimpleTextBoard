@@ -10,16 +10,18 @@ public class PostsController : Controller
 {
     private readonly IOptions<CaptchaConfig> _config;
     private readonly DbContext _db;
-    
-    public PostsController(DbContext databaseContext, IOptions<CaptchaConfig> config)
+    private readonly ILogger<PostsController> _logger;
+
+    public PostsController(DbContext databaseContext, IOptions<CaptchaConfig> config, ILogger<PostsController> logger)
     {
         _db = databaseContext;
         _config = config;
+        _logger = logger;
     }
 
     public IActionResult Index()
     {
-        ViewBag.Posts = _db.Posts.ToList();
+        ViewBag.Posts = Enumerable.Reverse(_db.Posts.ToList());
         return View();
     }
 
