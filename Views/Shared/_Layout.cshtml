@@ -10,14 +10,14 @@
 <header>
     <h1 class="main-title" style="cursor: pointer" onclick="window.location.href='/'">Demnoboard</h1>
     <hr class="title-hr"/>
-    <h4 class="second-title">yet another textboard</h4>
+    <h4 class="second-title" style="cursor: pointer" onclick="document.getElementById('input-fields').style.display = 'block';">yet another textboard</h4>
     <hr/>
 </header>
 
 @RenderBody()
 
 <footer>
-    <a href="#">Github</a> | <a href="#" onclick="document.getElementById('input-fields').style.display = 'block';">Create post</a>
+    <a href="https://github.com/demndevel/SimpleTextBoard">Github</a> | <a href="#" onclick="document.getElementById('input-fields').style.display = 'block';">Create post</a>
 </footer>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
