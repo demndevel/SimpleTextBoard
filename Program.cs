@@ -8,14 +8,13 @@ int versionMinor = Convert.ToInt16(builder.Configuration.GetConnectionString("Mi
 int versionMajor = Convert.ToInt16(builder.Configuration.GetConnectionString("Major"));
 int versionBuild = Convert.ToInt16(builder.Configuration.GetConnectionString("Build"));
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DbContext>(options => options.UseMySql(connection, new MySqlServerVersion(new Version(versionMajor,versionMinor,versionBuild))));
 builder.Services.Configure<CaptchaConfig>(builder.Configuration.GetSection("CaptchaConfig"));
+builder.Services.Configure<BotConfig>(builder.Configuration.GetSection("BotConfig"));
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Posts/Error");
@@ -39,4 +38,10 @@ app.Run();
 public class CaptchaConfig
 {
     public string ServerKey { get; set; } = "";
+}
+
+public class BotConfig
+{
+    public string Token { get; set; } = "";
+    public string ChatId { get; set; } = "";
 }

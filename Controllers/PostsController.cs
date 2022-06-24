@@ -9,14 +9,16 @@ namespace Demnoboard.Controllers;
 public class PostsController : Controller
 {
     private readonly IOptions<CaptchaConfig> _config;
+    private readonly IOptions<BotConfig> _botConfig;
     private readonly DbContext _db;
     private readonly ILogger<PostsController> _logger;
 
-    public PostsController(DbContext databaseContext, IOptions<CaptchaConfig> config, ILogger<PostsController> logger)
+    public PostsController(DbContext databaseContext, IOptions<CaptchaConfig> config, IOptions<BotConfig> botConfig, ILogger<PostsController> logger)
     {
         _db = databaseContext;
         _config = config;
         _logger = logger;
+        _botConfig = botConfig;
     }
 
     public IActionResult Index()
@@ -58,6 +60,7 @@ public class PostsController : Controller
             _db.Posts.Remove(_db.Posts.First());
         
         _db.SaveChanges();
+        SendToTelegram.SendPost(_db.Posts.Count(), title, text, _botConfig.Value.Token, _botConfig.Value.ChatId);
         return Redirect("~/");
     }
     
@@ -86,6 +89,9 @@ public class PostsController : Controller
             _db.Remove(_db.Posts.FirstOrDefault(e => e.Id == id));
         
         _db.SaveChanges();
+        
+        SendToTelegram.SendReply(id, title, text, _botConfig.Value.Token, _botConfig.Value.ChatId);
+        
         return Redirect("~/Posts/Post?id="+id);
     }
 
