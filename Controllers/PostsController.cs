@@ -60,7 +60,7 @@ public class PostsController : Controller
             _db.Posts.Remove(_db.Posts.First());
         
         _db.SaveChanges();
-        SendToTelegram.SendPost(_db.Posts.Count(), title, text, _botConfig.Value.Token, _botConfig.Value.ChatId);
+        SendToTelegram.SendPost(_db.Posts.ToList().Last().Id, title, text, _botConfig.Value.Token, _botConfig.Value.ChatId);
         return Redirect("~/");
     }
     

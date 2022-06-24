@@ -9,7 +9,7 @@ public static class SendToTelegram
         string result = $"*New post!*\n*Link*: https://board.demns.space/Posts/Post?id={id}\n*Title*: {title}\n*Text*: {text}";
         
         client.DownloadString(string.Format(
-            "https://PIZFA.telegram.org/bot{0}/sendMessage?chat_id={1}&text={2}&parse_mode=Markdown", 
+            "https://api.telegram.org/bot{0}/sendMessage?chat_id={1}&text={2}&parse_mode=Markdown", 
             token, 
             chatId,
             result));
