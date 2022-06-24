@@ -1,9 +1,9 @@
 # SimpleTextBoard
-simple text board using asp net mvc and google recaptcha and mysql
+simple text board using asp net mvc, google recaptcha and mysql with data sent to telegram channel by bot
 <br>
 ### Usage:
 
-1. Configure recaptcha and mysql in ```appsettings.json```
+1. Configure recaptcha, mysql (version and connection string) and Telegram bot (token and channel id) in ```appsettings.json```
 2. Enter site key in ```Views/Post/Index.cshtml``` and ```Views/Post/Post.cshtml```
 3. You can configure server port and other things in ```Properties/launchSetting.json```
 4. ```dotnet run```
