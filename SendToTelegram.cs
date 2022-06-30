@@ -1,3 +1,5 @@
+using System.Web;
+
 namespace Demnoboard;
 
 public static class SendToTelegram
@@ -7,6 +9,7 @@ public static class SendToTelegram
         var client = new System.Net.WebClient();
 
         string result = $"*New post!*\n*Link*: https://board.demns.space/Posts/Post?id={id}\n*Title*: {title}\n*Text*: {text}";
+        result = HttpUtility.UrlEncode(result);
         
         client.DownloadString(string.Format(
             "https://api.telegram.org/bot{0}/sendMessage?chat_id={1}&text={2}&parse_mode=Markdown", 
@@ -20,7 +23,8 @@ public static class SendToTelegram
         var client = new System.Net.WebClient();
 
         string result = $"*Reply to post!*\n*Link*: https://board.demns.space/Posts/Post?id={id}\n*Title*: {title}\n*Text*: {text}";
-        
+        result = HttpUtility.UrlEncode(result);
+
         client.DownloadString(string.Format(
             "https://api.telegram.org/bot{0}/sendMessage?chat_id={1}&text={2}&parse_mode=Markdown", 
             token, 
